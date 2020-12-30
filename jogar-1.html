@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="editor.css" />
+    <link rel="stylesheet" href="jogar.css" />
+
+    <title>Jogar | Cyber War</title>
+
+    <script
+      src="https://kit.fontawesome.com/bc3c744fa1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="bodyInGame">
+    <main class="main">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: rgba(26, 24, 24, 0.9999);"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <button type="button" class="btn btn-outline-warning">
+                  <b> Home </b>
+                </button>
+                <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="login.html">
+                <button type="button" class="btn btn-outline-warning">
+                  <b> Login </b>
+                </button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="historia.html">
+                <button type="button" class="btn btn-outline-warning">
+                  <b> História </b>
+                </button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group bnt-arenas">
+                <button
+                  type="button"
+                  class="btn btn-outline-warning dropdown-toggle"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <b> Arenas</b>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#" onclick="trocarArena01 ()"
+                    >Arena 1</a
+                  >
+                  <a class="dropdown-item" href="#" onclick="trocarArena02 ()"
+                    >Arena 2</a
+                  >
+                  <a class="dropdown-item" href="#" onclick="trocarArena03 ()"
+                    >Arena 3</a
+                  >
+                  <a class="dropdown-item" href="#" onclick="trocarArena04 ()"
+                    >Arena 4</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Pesquisar..."
+              aria-label="Pesquisar"
+            />
+            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
+              Pesquisar
+            </button>
+          </form>
+        </div>
+      </nav>
+
+      <div id="hp-box-ativo">
+        <div id="player-ativo">
+          <h4 id="nome-player-ativo">Player 1</h4>
+        </div>
+        <h1 id="hp-player-ativo">50</h1>
+      </div>
+
+      <div id="conta-jogadas">
+          <h3 id="texto-conta-jogadas">Jogadas</h1>
+          <h2 id="valor-conta-jogadas"><span id="contador-jogadas">0</span>/3</h1>
+      </div>
+
+      <div id="hp-box-oponente">
+        <div id="player-oponente">
+          <h4 id="nome-player-oponente">Player 2</h4>
+        </div>
+        <h1 id="hp-player-oponente">50</h1>
+      </div>
+
+      <div id="imgs" class="">
+        <div class="container container-cards-opo">
+          <div id="cartas-opo" class="row"></div>
+        </div>
+
+        <div class="container container-slots">
+          <div id="slots-arena-p-ativo" class="row">
+            <div class="slot-arena-p-ativo col-2 mx-auto"></div>
+            <div class="slot-arena-p-ativo col-2 mx-auto"></div>
+            <div class="slot-arena-p-ativo col-2 mx-auto"></div>
+            <div class="slot-arena-p-ativo col-2 mx-auto"></div>
+            <div class="slot-arena-p-ativo col-2 mx-auto"></div>
+          </div>
+        </div>
+        <div class="container container-cards-ativo">
+          <div id="cartas-mao" class="row"></div>
+        </div>
+      </div>
+
+      <div id="passa-turno">
+        <img src="imagens/InGame/botaoArena.png" class="imgPass" />
+      </div>
+
+      <div id="conta-turno">
+        <h3 id="texto-conta-turno">Turno</h1>
+        <h2 id="valor-conta-turno">50</h1>
+      </div>
+
+      <div id="baralho">
+        <img src="imagens/Cartas/baralho-cartas.png" class="imgBaralho" />
+      </div>
+    </main>
+
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="cartasDB.js"></script>
+    <script src="jogar.js"></script>
+  </body>
+</html>

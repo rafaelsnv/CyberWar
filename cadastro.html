@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="editor.css" />
+
+    <title>Cadastrar-se | Cyber War</title>
+
+    <script
+      src="https://kit.fontawesome.com/bc3c744fa1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="login.js">
+      window.onload = () => {
+          cadastroForm.onsubmit = () => {
+              var lgn = new NovoCadastro(lgn, nom, idad, ema, sen);
+              console.log(lgn)
+          }
+      }
+    </script>
+  </head>
+
+  <body class="container body">
+    <header class="row header">
+      <img src="imagens/logo-sem-caveira-2.png" class="logoHeaderIndex" />
+
+      <nav
+        class="navbar navbar-expand-lg navbar-dark col-12"
+        style="background-color: rgba(26, 24, 24, 0.9);"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                ><b>Home</b> <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="login.html"><b>Login</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="historia.html"><b>História</b></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container main">
+      <section class="row quadrado">
+        <div class="col-md-12">
+          <section
+            class="row loginInscrever card border-warning mb-3"
+            id="card"
+          >
+            <form id="cadastroForm" class="row">
+              <section class="col-md-6">
+                <div class="form-group">
+                  <label class="textincrever" for="c_nome">
+                    <h8 class="text"><b>NOME:</b></h8>
+                  </label>
+                  <input type="text" class="form-control a" id="c_nome" />
+                </div>
+
+                <div class="form-group">
+                  <label class="textincrever" for="c_idade">
+                    <h8 class="text"><b>DATA NASCIMENTO:</b></h8>
+                  </label>
+
+                  <input type="date" class="form-control a" id="c_idade" />
+                </div>
+
+                <div class="form-group">
+                  <label class="textincrever" for="c_email">
+                    <h8 class="text"><b>E-MAIL:</b></h8>
+                  </label>
+                  <div class="input-group">
+                    <input type="text" class="form-control a" id="c_email" />
+                    <span class="input-group-text" id="basic-addon2"
+                      >@exemplo.com</span
+                    >
+                  </div>
+                </div>
+              </section>
+
+              <section class="col-md-6">
+                <div class="form-group">
+                  <label class="textincrever" for="c_login">
+                    <h8 class="text"><b>LOGIN:</b></h8>
+                  </label>
+                  <input type="text" class="form-control a" id="c_login" />
+                </div>
+
+                <div class="form-group">
+                  <label class="textincrever" for="c_senha">
+                    <h8 class="text"><b>SENHA:</b></h8>
+                  </label>
+
+                  <input type="password" class="form-control a" id="c_senha" />
+                </div>
+
+                <div class="form-group">
+                  <label class="textincrever" for="c_senhaOk">
+                    <h8 class="text"><b>CONFIRME SUA SENHA:</b></h8>
+                  </label>
+                  <input
+                    type="password"
+                    class="form-control a"
+                    id="c_senhaOk"
+                  />
+                </div>
+              </section>
+
+              <section class="row col-md-12 ">
+                <div class="col-md-5"></div>
+
+                <div class="col-md-4">
+                  <div class="botao_cadastrar">
+                    <a href="#"
+                      ><button
+                        type="button"
+                        onclick="cadastroUsuario()"
+                        class="btn btn-lg  btn-warning"
+                      >
+                        CADASTRAR
+                      </button></a
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-4"></div>
+              </section>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

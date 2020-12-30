@@ -1,0 +1,313 @@
+/* Implementação da Fonte */
+@font-face {
+  font-family: "Vox Round W01 Semibold";
+  src: url("fonts/voxRoundW01Semibold.eot");
+  src: url("fonts/voxRoundW01Semibold.eot?#iefix") format("embbed-opentype"),
+    url("fonts/voxRoundW01Semibold.woff") format("woff"),
+    url("fonts/voxRoundW01Semibold.ttf") format("truetype"),
+    url("fonts/voxRoundW01Semibold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bodyInGame {
+  background-image: url("imagens/InGame/arenaPadrao.png");
+  font-family: "Vox Round W01 Semibold";
+  width: 100%;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  max-width: auto;
+}
+
+body,
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+}
+
+.navbar {
+  display: none;
+}
+
+img.active {
+  width: 150px;
+  box-shadow: 0 0 1em gold;
+  border-radius: 7px;
+  background-color: rgba(255, 217, 0, 0.45);
+}
+
+/* formatação cartas*/
+
+div#imgs img {
+  width: 130px;
+}
+
+/* CARTAS DO JOGADOR ATIVO*/
+
+div.container-cards-ativo {
+  position: absolute;
+  left: 15%;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0%;
+}
+
+/* CARTAS DO JOGADOR OPONENTE*/
+
+div.container-cards-opo {
+  position: absolute;
+  left: 15%;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 60%;
+}
+
+div#cartas-opo img:hover {
+  box-shadow: 0 0 1em rgb(255, 38, 0);
+  border-radius: 7px;
+  background-color: rgba(255, 72, 0, 0.45);
+}
+
+div#baralho img:hover {
+  box-shadow: 0 0 1em rgba(255, 217, 0, 0.452);
+  border-radius: 7px;
+  background-color: rgba(255, 217, 0, 0.308);
+}
+
+/* CARTAS NO GERAL*/
+
+.def,
+.atk {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0.1%;
+  padding: 1px;
+}
+
+.atk {
+  margin-left: 18px;
+}
+
+.def {
+  margin-left: 108px;
+}
+
+/* SLOTS DA ARENA */
+
+div.container-slots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 30%;
+}
+
+div.slot-arena-p-ativo {
+  position: relative;
+  height: 180px;
+  width: 120px;
+  max-width: 130px;
+}
+
+div.slot-arena-p-ativo div.def {
+  position: absolute;
+  bottom: -11%;
+  right: -10%;
+  padding: 1px;
+}
+
+div.slot-arena-p-ativo div.atk {
+  position: absolute;
+  bottom: -11%;
+  left: 10%;
+  padding: 1px;
+}
+
+div.slot-arena-p-ativo.destaque {
+  box-shadow: 0 0 1em rgba(255, 217, 0, 0.356);
+  border-radius: 7px;
+  background-color: rgba(255, 217, 0, 0.24);
+}
+
+/* Passa Turno */
+
+#passa-turno {
+  position: absolute;
+  right: -1%;
+  bottom: 60%;
+}
+
+.imgPass {
+  width: 70%;
+}
+
+/* Conta Jogadas */
+
+#conta-jogadas {
+  background-image: url("imagens/InGame/box.png");
+  background-repeat: no-repeat;
+  background-size: unset, cover;
+  height: 142px;
+  width: 136px;
+  position: absolute;
+  bottom: 50%;
+  left: 1%;
+}
+
+#valor-conta-jogadas {
+  text-align: center;
+  margin-top: -6%;
+  margin-left: 5%;
+}
+
+#texto-conta-jogadas {
+  text-align: center;
+  margin-top: 11%;
+  margin-left: 6%;
+}
+
+/* Conta Turno */
+
+#conta-turno {
+  background-image: url("imagens/InGame/box.png");
+  background-repeat: no-repeat;
+  background-size: unset, cover;
+  height: 142px;
+  width: 136px;
+  position: absolute;
+  right: 3%;
+  bottom: 40%;
+}
+
+#valor-conta-turno {
+  text-align: center;
+  margin-top: -6%;
+}
+
+#texto-conta-turno {
+  text-align: center;
+  margin-top: 11%;
+}
+
+/* Baralho */
+
+#baralho {
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+}
+
+.imgBaralho {
+  width: 70%;
+}
+
+/* Players e HPs */
+
+/* Ativo */
+#player-ativo {
+  background-image: url("imagens/InGame/boxPlayer.png");
+  background-repeat: no-repeat;
+  background-size: unset, cover;
+  width: 175px;
+  position: absolute;
+  top: -25%;
+  left: 4%;
+}
+
+#nome-player-ativo {
+  text-align: center;
+  margin-top: 5px;
+  margin-left: -10px;
+}
+
+#hp-box-ativo {
+  background-image: url("imagens/InGame/boxHP.png");
+  background-repeat: no-repeat;
+  background-size: unset, cover;
+  background-size: 80%;
+  height: 150px;
+  width: 225px;
+  position: absolute;
+  bottom: 1%;
+  left: 1.75%;
+}
+
+#hp-player-ativo {
+  text-align: center;
+  position: relative;
+  top: 25%;
+}
+
+/* Oponente */
+
+#player-oponente {
+  background-image: url("imagens/InGame/boxPlayer.png");
+  background-repeat: no-repeat;
+  background-size: unset, cover;
+  width: 175px;
+  position: absolute;
+  top: -25%;
+  left: 4%;
+}
+
+#nome-player-oponente {
+  text-align: center;
+  margin-left: -10px;
+  margin-top: 5px;
+}
+
+#hp-box-oponente {
+  background-image: url("imagens/InGame/boxHP.png");
+  background-repeat: no-repeat;
+  background-size: unset, cover;
+  background-size: 80%;
+  height: 150px;
+  width: 225px;
+  position: absolute;
+  top: 5%;
+  left: 1.75%;
+}
+
+#hp-player-oponente {
+  text-align: center;
+  position: relative;
+  top: 25%;
+}
+
+/* CLASSE BRILHO PRA PISCAR TEXTO*/
+
+.pisca {
+  color: rgb(211, 44, 44);
+}
+
+h2#valor-conta-jogadas {
+  transition: backgroundColor 0.05s ease-in-out;
+}
+
+h3#texto-conta-jogadas {
+  transition: backgroundColor 0.05s ease-in-out;
+}
+
+div#cartas-opo .def {
+  transition: backgroundColor 0.05s ease-in-out;
+}
+
+h2#valor-conta-turno {
+  transition: backgroundColor 0.05s ease-in-out;
+}
+
+/* TORNA INVISÍVEL O BARALHO QUANDO ELE ACABA */
+
+div#baralho.baralho-vazio {
+  display: none;
+}
